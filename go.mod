@@ -1,3 +1,3 @@
-module github.com/woodstock-tokyo/go-generics
+module github.com/woodstock-tokyo/go-generics-playground
 
-go 1.17
+go 1.18
