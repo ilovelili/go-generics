@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"golang.org/x/exp/constraints"
 	"golang.org/x/exp/slices"
 )
@@ -25,12 +23,12 @@ func main() {
 	}
 
 	a = a[:12]
-	fmt.Println("a", a)
-	fmt.Println(cap(a)) // 13
+	println("a", a)
+	println(cap(a)) // 13
 
 	a = slices.Clip(a)
-	fmt.Println("a", a)
-	fmt.Println(cap(a)) // 12
+	println("a", a)
+	println(cap(a)) // 12
 
 	b := []string{
 		"foo",
@@ -44,24 +42,24 @@ func main() {
 	// compact only replaces consecutive runs of equal elements
 	a = slices.Compact(b) // [foo bar baz foo baz]
 
-	fmt.Println(slices.Contains(a, "zoo")) // false
+	println(slices.Contains(a, "zoo")) // false
 
 	a = slices.Delete(a, 1, 3)
-	fmt.Println(a) // [foo foo baz]
+	println(a) // [foo foo baz]
 
-	fmt.Println("a", a)
-	fmt.Println(cap(a))
+	println("a", a)
+	println(cap(a))
 
 	a = slices.Grow(a, 5)
-	fmt.Println("a growed to", a)
-	fmt.Println(cap(a))
+	println("a growed to", a)
+	println(cap(a))
 
 	a = slices.Insert(a, 0, "noo")
-	fmt.Println("a", a)
-	fmt.Println(cap(a))
+	println("a", a)
+	println(cap(a))
 
 	slices.SortStableFunc(a, less[string])
-	fmt.Println(a)
+	println(a)
 }
 
 func less[E constraints.Ordered](i, j E) bool {

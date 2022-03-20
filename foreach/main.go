@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
 func main() {
 	each([]int{1, 2, 3}, func(i int) {
-		fmt.Println(i)
+		println(i)
 	})
 }
 

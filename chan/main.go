@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 )
 
 type ChanElement interface {
@@ -32,10 +31,10 @@ func makeChan[T chan E, E ChanElement](ctx context.Context, arr []E) T {
 
 func main() {
 	for v := range makeChan(context.Background(), []int{1, 2, 3}) {
-		fmt.Println(v)
+		println(v)
 	}
 
 	for v := range makeChan(context.Background(), []string{"1", "2", "3"}) {
-		fmt.Println(v)
+		println(v)
 	}
 }

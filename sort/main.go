@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"golang.org/x/exp/constraints"
 )
 
@@ -18,6 +16,6 @@ func sort[E constraints.Ordered](arr []E) []E {
 }
 
 func main() {
-	fmt.Println(sort([]int{1, 3, 2}))
-	fmt.Println(sort([]string{"1", "3", "2"}))
+	println(sort([]int{1, 3, 2}))
+	println(sort([]string{"1", "3", "2"}))
 }

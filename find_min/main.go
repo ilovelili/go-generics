@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"golang.org/x/exp/constraints"
 )
 
@@ -27,6 +25,6 @@ func Min2[T constraints.Ordered](t1, t2 T) T {
 }
 
 func main() {
-	fmt.Println(Min1(1, 2))
-	fmt.Println(Min2("2", "1"))
+	println(Min1(1, 2))
+	println(Min2("2", "1"))
 }

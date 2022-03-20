@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func filter[E any](arr []E, f func(E) bool) []E {
 	result := []E{}
 	for _, item := range arr {
@@ -18,5 +16,5 @@ func main() {
 		return i < 2
 	})
 
-	fmt.Println(b)
+	println(b)
 }
