@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"golang.org/x/exp/constraints"
 	"golang.org/x/exp/slices"
 )
 
@@ -58,4 +59,11 @@ func main() {
 	a = slices.Insert(a, 0, "noo")
 	fmt.Println("a", a)
 	fmt.Println(cap(a))
+
+	slices.SortStableFunc(a, less[string])
+	fmt.Println(a)
+}
+
+func less[E constraints.Ordered](i, j E) bool {
+	return i < j
 }
