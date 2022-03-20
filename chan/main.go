@@ -34,4 +34,8 @@ func main() {
 	for v := range makeChan(context.Background(), []int{1, 2, 3}) {
 		fmt.Println(v)
 	}
+
+	for v := range makeChan(context.Background(), []string{"1", "2", "3"}) {
+		fmt.Println(v)
+	}
 }
